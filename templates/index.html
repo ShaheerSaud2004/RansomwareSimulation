@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Encryptor/Decryptor</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">File Encryptor/Decryptor</h1>
+        <p class="text-center">This web application simulates ransomware behavior by allowing users to encrypt and decrypt files using AES encryption. It was created by Shaheer Saud as a demonstration of cryptographic techniques.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Encrypt File</h2>
+                        <form action="/encrypt" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" name="file" class="form-control-file">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Encrypt</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Decrypt File</h2>
+                        <form action="/decrypt" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" name="file" class="form-control-file">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Decrypt</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <h3>About This Project</h3>
+            <p>This project simulates the encryption and decryption process similar to ransomware, but without any malicious intent. It was created within a day with research into AES (Advanced Encryption Standard) and the following technologies:</p>
+            <ul>
+                <li>Python: The primary programming language used for developing the encryption and decryption logic.</li>
+                <li>Flask: A lightweight web framework used to create the web application.</li>
+                <li>PyCryptoDome: A Python library for cryptographic operations, used to implement AES encryption.</li>
+                <li>Bootstrap: A front-end framework used to style the web interface and ensure it is responsive and user-friendly.</li>
+            </ul>
+            <p>For more information or to get in touch, visit <a href="https://shaheersaud.dev/">Shaheer Saud's portfolio</a>.</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
